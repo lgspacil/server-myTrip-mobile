@@ -25,7 +25,7 @@ require('./server/config/mongoose.js');
 var routes = require('./server/config/routes.js')(app)
 
 
-app.listen(8000, function() {
+app.listen(process.env.PORT || 8080, function() {
     console.log("listening on port 8000");
 })
 
