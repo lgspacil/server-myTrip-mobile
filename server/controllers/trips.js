@@ -54,9 +54,11 @@ module.exports = {
     },
 
     load_specific_markers: function(req, res){
+        console.log("LUCAS LOOK HERE!", req.body)
         Trip.findOne({_id: req.body.trip_id})
         .populate('_locations')
         .exec(function(err, result){
+            console.log("the result is: @@@!!!@@#$%^", result);
             return res.json(result);
         })
     },
@@ -101,6 +103,13 @@ module.exports = {
             if(err){console.log("there was an error")}
             else{res.json(result);}  
           })
+    },
+
+    update_trip_pic : function(req, res){
+        Trip.update({_id: req.body.trip_id}, {$set: {"image": req.body.image}}, function(err, result){
+            if(err){console.log("there was something wrong when updating the users money and day count")}
+            else{res.json(true);}
+        })
     }
 
 

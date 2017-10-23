@@ -19,7 +19,6 @@ module.exports = {
                                                     "price": req.body.price,
                                                     "img_url":req.body.img_url,
                                                     "day_number":req.body.day_number,
-                                                    "weather":req.body.weather,
                                                     "images":req.body.images}}, function(err, result){
             if(err){console.log("there was an error when updating")}
             else{res.json(result);}

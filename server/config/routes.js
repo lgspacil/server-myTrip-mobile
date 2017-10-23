@@ -71,4 +71,8 @@ module.exports = function (app){
         trips.filter_trips(req, res);
     })
 
+    app.post('/update_trip_pic', function(req, res){
+        trips.update_trip_pic(req, res);
+    })
+
 }

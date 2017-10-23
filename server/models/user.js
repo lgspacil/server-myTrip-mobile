@@ -7,7 +7,6 @@ var UserSchema = new mongoose.Schema({
     password: {type: String},
     confirm_password: {type: String},
     _trip_id: [{type: Schema.Types.ObjectId, ref:'Trip'}],
-    country: {type: String}
 })
 
 var User = mongoose.model('User', UserSchema);

@@ -8,6 +8,7 @@ var TripSchema = new mongoose.Schema({
     _locations: [{type: Schema.Types.ObjectId, ref:'Location'}],
     _user_id: {type: Schema.Types.ObjectId, ref:'User'},
     username: {type: String},
+    image: {type: String}
 
 })
 
